@@ -17,4 +17,29 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font, sans-serif);
+  font-weight: var(--font-weight-text);
+  background-color: var(--background-color, #ffffff);
+  color: var(--text-color);
+}
+
+.header {
+  background-image: repeating-linear-gradient(
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a);
+  inline-size: 100%;
+  block-size: 960px;
+  background-attachment: local;
+  background-size: cover;
 }
