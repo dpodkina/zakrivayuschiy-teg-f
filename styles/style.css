@@ -60,8 +60,13 @@
   font-size: 14px;
 }
 
+.theme-menu__button:disabled {
+  opacity: 0.6;
+}
+
 .theme-menu__button:disabled:before {
   content: "▶";
+  opacity: 0.6;
 }
 
 .post {
@@ -96,10 +101,32 @@
   line-height: 21px;
 }
 
+.button__text {
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 14px;
+}
+
 button {
   cursor: pointer;
 }
 
+.footer__button {
+  all: unset;
+  border: 2px black solid;
+  background-color: #ffffff;
+  inline-size: 23%;
+  padding-block-start: 15px;
+  padding-block-end: 18.5px;
+}
+
+.floppy_icon {
+  width: 21px;
+  height: 21px;
+  margin-inline-end: 3.5px;
+}
+
+/*
 .card__like-button {
   all: unset;
   width: 130px;
@@ -115,3 +142,4 @@ button {
   line-height: 12.6px;
   cursor: pointer;
 }
+  */
