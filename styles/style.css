@@ -36,6 +36,34 @@
   margin-block-end: 100px;
 }
 
+.header__title {
+  justify-content: center;
+  font-family: var(--accent-font);
+  padding-block-start: 136px;
+  font-size: clamp(0.875rem, -0.2514rem + 4.7932vw, 4.0625rem);
+}
+
+.header__subtitle {
+  justify-content: center;
+  font-family: var(--accent-font);
+  margin-block-start: 20px;
+  margin-block-end: 25px;
+  font-size: clamp(0.875rem, 0.6762rem + 0.8459vw, 1.4375rem);
+  text-transform: uppercase;
+}
+
+.theme-menu__button {
+  all: unset;
+  margin-block-end: 14px;
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.theme-menu__button:disabled:before {
+  content: "▶";
+}
+
 .post {
   border: 2px black solid;
   background-color: var(--background-color);
