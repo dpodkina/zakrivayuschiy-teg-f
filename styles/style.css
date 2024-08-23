@@ -84,7 +84,7 @@ button:focus {
 
 .theme-menu__button:before {
   position: absolute;
-  border-bottom: 2px black solid;
+  border-bottom: 2px var(--text-color) solid;
   opacity: 0.6;
   content: "";
   width: 0%;
@@ -103,14 +103,20 @@ button:focus {
 /*ТРЕУГОЛЬНИК ПЕРЕД КНОПКОЙ*/
 .theme-menu__button:disabled:before {
   content: "▶";
-  position: relative;
+  position: absolute;
   border: none;
+  animation: arrow 0.5s infinite alternate ease-in-out;
+  left: -20px;
 }
 
 .theme-menu__button:hover {
   opacity: 0.6;
   transition-duration: 0.3s;
   transition-timing-function: ease;
+}
+
+.card__like-button:focus {
+  box-shadow: 2px 2px 0 0 var(--text-color);
 }
 
 .post {
@@ -172,6 +178,7 @@ button:focus {
   font-size: 14px;
   line-height: 12.6px;
   cursor: pointer;
+  transition-duration: 0.3s;
 }
 
 .button__text {
