@@ -52,21 +52,65 @@
   text-transform: uppercase;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.theme-menu__list:focus:after {
+  transform: scale(1, 1);
+}
+
+/*КНОПКА*/
 .theme-menu__button {
   all: unset;
+  position: relative;
   margin-block-end: 14px;
   font-family: var(--accent-font);
   text-transform: uppercase;
   font-size: 14px;
 }
 
+/*НАЖАТАЯ КНОПКА*/
 .theme-menu__button:disabled {
   opacity: 0.6;
+  pointer-events: none;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
 }
 
+.theme-menu__button:before {
+  position: absolute;
+  border-bottom: 2px black solid;
+  opacity: 0.6;
+  content: "";
+  width: 0%;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transform: scale(0, 1);
+}
+
+.theme-menu__button:focus:before {
+  position: absolute;
+  width: 100%;
+  bottom: -4px;
+  transform: scale(1, 1);
+}
+
+/*ТРЕУГОЛЬНИК ПЕРЕД КНОПКОЙ*/
 .theme-menu__button:disabled:before {
   content: "▶";
+  position: relative;
+  border: none;
+}
+
+.theme-menu__button:hover {
   opacity: 0.6;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
 }
 
 .post {
@@ -101,14 +145,39 @@
   line-height: 21px;
 }
 
+.post-button {
+  display: flex;
+  width: 169px;
+  height: 38px;
+  margin-block-start: 25px;
+  margin-block-end: 25px;
+  align-self: self-end;
+  margin-inline-end: 25px;
+}
+
+.card__icon-button {
+  all: unset;
+  width: 39px;
+  height: 36px;
+  margin-inline-end: 12px;
+}
+
+.card__like-button {
+  all: unset;
+  width: 130px;
+  height: 36px;
+  border: 2px black solid;
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12.6px;
+  cursor: pointer;
+}
+
 .button__text {
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
-}
-
-button {
-  cursor: pointer;
 }
 
 .footer__button {
@@ -127,19 +196,5 @@ button {
 }
 
 /*
-.card__like-button {
-  all: unset;
-  width: 130px;
-  height: 38px;
-  border: 2px black solid;
-  margin-inline-end: 25px;
-  margin-block-start: 25px;
-  margin-block-end: 25px;
-  align-self: self-end;
-  font-family: var(--accent-font);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 12.6px;
-  cursor: pointer;
-}
+
   */
