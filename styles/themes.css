@@ -5,6 +5,7 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
+/*ПЕРЕМЕННЫЕ ДЛЯ СВЕТЛОЙ ТЕМЫ*/
 :root.theme-light {
   --font-weight-heading: 700;
   --font-weight-text: 400;
@@ -26,6 +27,7 @@
     linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a);
 }
 
+/*ПЕРЕМЕННЫЕ ДЛЯ ТЕМНОЙ ТЕМЫ*/
 :root.theme-dark {
   --font-weight-heading: 785;
   --font-weight-text: 465;
@@ -47,6 +49,7 @@
     linear-gradient(180deg, #007f0c, #004306);
 }
 
+/*ПРЕДПОЧТ СВЕТЛОЙ ТЕМЫ*/
 @media (prefers-color-scheme: light) {
   :root.theme-light {
     --font-weight-heading: 700;
@@ -78,6 +81,7 @@
   }
 }
 
+/*ПРЕДПОЧТ ТЕМНОЙ ТЕМЫ*/
 @media (prefers-color-scheme: dark) {
   :root.theme-dark {
     --font-weight-heading: 785;

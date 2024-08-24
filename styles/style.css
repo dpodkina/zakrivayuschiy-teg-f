@@ -14,6 +14,7 @@
 
 */
 
+/*СТРАНИЦА*/
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -27,6 +28,7 @@
   text-align: center;
 }
 
+/*HEADER*/
 .header {
   border: 2px black solid;
   background-color: var(--background-color);
@@ -36,6 +38,7 @@
   margin-block-end: 100px;
 }
 
+/*ЗАГОЛОВОК h1*/
 .header__title {
   justify-content: center;
   font-family: var(--accent-font);
@@ -43,6 +46,7 @@
   font-size: clamp(0.875rem, -0.2514rem + 4.7932vw, 4.0625rem);
 }
 
+/*ПОДЗАГОЛОВОК h2*/
 .header__subtitle {
   justify-content: center;
   font-family: var(--accent-font);
@@ -52,19 +56,17 @@
   text-transform: uppercase;
 }
 
+/*КНОПКА В СОСТОЯНИИ НАВЕДЕНИЯ*/
 button:hover {
   cursor: pointer;
 }
 
+/*КНОПКА В Tab*/
 button:focus {
   outline: none;
 }
 
-.theme-menu__list:focus:after {
-  transform: scale(1, 1);
-}
-
-/*КНОПКА*/
+/*КНОПКА МЕНЮ*/
 .theme-menu__button {
   all: unset;
   position: relative;
@@ -74,7 +76,7 @@ button:focus {
   font-size: 14px;
 }
 
-/*НАЖАТАЯ КНОПКА*/
+/*НАЖАТАЯ КНОПКА МЕНЮ*/
 .theme-menu__button:disabled {
   opacity: 0.6;
   pointer-events: none;
@@ -82,6 +84,7 @@ button:focus {
   transition-timing-function: ease;
 }
 
+/*НАЧ СОСТОЯНИЕ ПОДЧЕРКИВАНИЯ КНОПКИ МЕНЮ Tab*/
 .theme-menu__button:before {
   position: absolute;
   border-bottom: 2px var(--text-color) solid;
@@ -93,6 +96,7 @@ button:focus {
   transform: scale(0, 1);
 }
 
+/*КОНЕЧ СОСТОЯНИЕ ПОДЧЕРКИВАНИЯ КНОПКИ МЕНЮ Tab*/
 .theme-menu__button:focus:before {
   position: absolute;
   width: 100%;
@@ -100,7 +104,7 @@ button:focus {
   transform: scale(1, 1);
 }
 
-/*ТРЕУГОЛЬНИК ПЕРЕД КНОПКОЙ*/
+/*ТРЕУГОЛЬНИК ПЕРЕД КНОПКОЙ МЕНЮ*/
 .theme-menu__button:disabled:before {
   content: "▶";
   position: absolute;
@@ -109,16 +113,14 @@ button:focus {
   left: -20px;
 }
 
+/*КНОПКА МЕНЮ В СОСТОЯНИИ НАВЕДЕНИЯ*/
 .theme-menu__button:hover {
   opacity: 0.6;
   transition-duration: 0.3s;
   transition-timing-function: ease;
 }
 
-.card__like-button:focus {
-  box-shadow: 2px 2px 0 0 var(--text-color);
-}
-
+/*КАРТОЧКА*/
 .post {
   border: 2px black solid;
   background-color: var(--background-color);
@@ -129,6 +131,7 @@ button:focus {
   margin-block-end: 50px;
 }
 
+/*ЗАГОЛОВОК КАРТОЧКИ h3*/
 .heading {
   text-align: left;
   margin-inline-start: 10px;
@@ -140,6 +143,7 @@ button:focus {
   line-height: 21.78px;
 }
 
+/*ТЕКСТ КАРТОЧКИ*/
 .text {
   margin-inline-start: 25px;
   margin-inline-end: 25px;
@@ -151,6 +155,7 @@ button:focus {
   line-height: 21px;
 }
 
+/*БЛОК СЕРДЕЧКА И ЛАЙКА*/
 .post-button {
   display: flex;
   width: 169px;
@@ -161,6 +166,7 @@ button:focus {
   margin-inline-end: 25px;
 }
 
+/*КНОПКА, ОБОРАЧИВАЮЩАЯ ИКОНКУ СЕРДЕЧКА*/
 .card__icon-button {
   all: unset;
   width: 39px;
@@ -168,6 +174,7 @@ button:focus {
   margin-inline-end: 12px;
 }
 
+/*КНОПКА LIKE*/
 .card__like-button {
   all: unset;
   position: relative;
@@ -183,31 +190,40 @@ button:focus {
   overflow: hidden;
 }
 
+/*КНОПКА LIKE В Tab*/
+.card__like-button:focus {
+  box-shadow: 2px 2px 0 0 var(--text-color);
+}
+
+/*НАЧ СОСТОЯНИЕ ЗАЛИВКИ КНОПКИ LIKE ПРИ НАВЕДЕНИИ */
 .card__like-button:before {
   position: absolute;
   content: "";
   width: 0;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
   transform: translate(-100%);
 }
 
+/*КОНЕЧ СОСТОЯНИЕ ЗАЛИВКИ КНОПКИ LIKE ПРИ НАВЕДЕНИИ*/
 .card__like-button:hover:before {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: var(--text-color);
-  transform: translate(10%);
   left: -10%;
   top: 0;
+  transform: translate(10%);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
+/*ТЕКСТ КНОПКИ*/
 .button__text {
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
 }
 
+/*КНОПКА В FOOTER*/
 .footer__button {
   all: unset;
   position: relative;
@@ -220,10 +236,12 @@ button:focus {
   overflow: hidden;
 }
 
+/*КНОПКА FOOTER В Tab*/
 .footer__button:focus {
   box-shadow: 2px 2px 0 0 var(--text-color);
 }
 
+/*НАЧ СОСТОЯНИЕ ЗАЛИВКИ КНОПКИ FOOTER ПРИ НАВЕДЕНИИ*/
 .footer__button:before {
   position: absolute;
   content: "";
@@ -233,6 +251,7 @@ button:focus {
   transform: translate(-100%);
 }
 
+/*КОНЕЧ СОСТОЯНИЕ ЗАЛИВКИ КНОПКИ FOOTER ПРИ НАВЕДЕНИИ*/
 .footer__button:hover:before {
   position: absolute;
   width: 100%;
@@ -243,12 +262,9 @@ button:focus {
   top: 0;
 }
 
+/*ИКОНКА ДИСКЕТЫ*/
 .floppy_icon {
   width: 21px;
   height: 21px;
   margin-inline-end: 3.5px;
 }
-
-/*
-
-  */

@@ -7,5 +7,6 @@
   --heading-font-weight-light: 700;
 }
 
+/*НА МОБ УСТРОЙСТВЕ*/
 @media (width <= 375px) {
 }
