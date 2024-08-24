@@ -180,7 +180,7 @@ button:focus {
   position: relative;
   width: 130px;
   height: 36px;
-  border: 2px black solid;
+  border: 2px var(--text-color) solid;
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
@@ -188,6 +188,8 @@ button:focus {
   cursor: pointer;
   transition-duration: 0.3s;
   overflow: hidden;
+  z-index: 1;
+  background-color: var(--background-color);
 }
 
 /*КНОПКА LIKE В Tab*/
@@ -214,13 +216,23 @@ button:focus {
   transform: translate(10%);
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
+  z-index: 0;
 }
 
-/*ТЕКСТ КНОПКИ*/
+/*ТЕКСТ КНОПКИ LIKE и FOOTER*/
 .button__text {
   font-family: var(--accent-font);
   font-weight: 400;
   font-size: 14px;
+  color: var(--text-color);
+  z-index: 2;
+  position: relative;
+}
+
+/*ТЕКСТ КНОПКИ LIKE и FOOTER ПРИ НАВЕДЕНИИ*/
+.button__text:hover {
+  mix-blend-mode: difference;
+  color: var(--background-color);
 }
 
 /*КНОПКА В FOOTER*/
@@ -228,12 +240,13 @@ button:focus {
   all: unset;
   position: relative;
   border: 2px black solid;
-  background-color: #ffffff;
+  background-color: var(--background-color);
   inline-size: 23%;
   padding-block-start: 15px;
   padding-block-end: 18.5px;
   transition-duration: 0.3s;
   overflow: hidden;
+  z-index: 0;
 }
 
 /*КНОПКА FOOTER В Tab*/
@@ -267,4 +280,5 @@ button:focus {
   width: 21px;
   height: 21px;
   margin-inline-end: 3.5px;
+  color: var(--text-color);
 }
