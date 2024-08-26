@@ -113,19 +113,30 @@
     box-shadow: 2px 2px 0 0 var(--text-color);
   }
 
+  /*КНОПКА LIKE*/
+  .card__like-button {
+    z-index: 0;
+    background-color: var(--background-color);
+  }
+
+  .card__like-button:hover:before {
+    background-color: var(--text-color);
+    z-index: 0;
+  }
+
   /*ТЕКСТ КНОПКИ LIKE и FOOTER*/
   .button__text {
-    font-family: var(--accent-font);
-    font-weight: 400;
-    font-size: 14px;
     color: var(--text-color);
-    z-index: 2;
-    position: relative;
   }
 
   /*ТЕКСТ КНОПКИ LIKE и FOOTER ПРИ НАВЕДЕНИИ*/
   .button__text:hover {
-    mix-blend-mode: difference;
-    color: var(--background-color);
+    color: var(--background-color), #000000;
+  }
+
+  /*КОНЕЧ СОСТОЯНИЕ ЗАЛИВКИ КНОПКИ FOOTER ПРИ НАВЕДЕНИИ*/
+  .footer__button:hover:before {
+    background-color: var(--text-color);
+    z-index: 1;
   }
 }

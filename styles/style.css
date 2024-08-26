@@ -225,6 +225,7 @@ button:focus {
   font-weight: 400;
   font-size: 14px;
   color: var(--text-color);
+  fill: var(--text-color);
   z-index: 2;
   position: relative;
 }
@@ -233,6 +234,7 @@ button:focus {
 .button__text:hover {
   mix-blend-mode: difference;
   color: var(--background-color);
+  fill: var(--background-color);
 }
 
 /*КНОПКА В FOOTER*/
@@ -246,7 +248,7 @@ button:focus {
   padding-block-end: 18.5px;
   transition-duration: 0.3s;
   overflow: hidden;
-  z-index: 0;
+  z-index: 1;
 }
 
 /*КНОПКА FOOTER В Tab*/
@@ -273,6 +275,7 @@ button:focus {
   transform: translate(10%);
   left: -10%;
   top: 0;
+  z-index: 1;
 }
 
 /*ИКОНКА ДИСКЕТЫ*/
@@ -280,5 +283,26 @@ button:focus {
   width: 21px;
   height: 21px;
   margin-inline-end: 3.5px;
-  color: var(--text-color);
+  fill: var(--text-color);
+}
+
+.floppy_icon:hover {
+  z-index: 4;
+  position: relative;
+  mix-blend-mode: difference;
+  fill: var(--background-color);
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--text-color);
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.sparks {
+  opacity: 0;
 }
