@@ -303,6 +303,31 @@ button:focus {
   transition-timing-function: ease;
 }
 
+/*БЛЕСТКИ*/
 .sparks {
+  fill: var(--heart-color);
   opacity: 0;
+}
+
+/*КОНТУР*/
+.contour {
+  fill: var(--text-color);
+}
+
+/*СЕРДЕЧКО*/
+.heart {
+  fill: transparent;
+}
+
+.heart:hover {
+  fill: black;
+}
+
+.main-body {
+  transition: fill 3s;
+  fill: transparent;
+}
+
+.main-body:hover {
+  fill: blue;
 }
