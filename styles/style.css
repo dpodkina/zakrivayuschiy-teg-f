@@ -14,7 +14,7 @@
 
 */
 
-/*СТРАНИЦА*/
+/*Страница*/
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -28,7 +28,7 @@
   text-align: center;
 }
 
-/*HEADER*/
+/*Шапка*/
 .header {
   border: 2px black solid;
   background-color: var(--background-color);
@@ -38,7 +38,7 @@
   margin-block-end: 100px;
 }
 
-/*ЗАГОЛОВОК h1*/
+/*Заголовок h1*/
 .header__title {
   justify-content: center;
   font-family: var(--accent-font);
@@ -46,7 +46,7 @@
   font-size: clamp(0.875rem, -0.2514rem + 4.7932vw, 4.0625rem);
 }
 
-/*ПОДЗАГОЛОВОК h2*/
+/*Подзаголовок h2*/
 .header__subtitle {
   justify-content: center;
   font-family: var(--accent-font);
@@ -56,17 +56,17 @@
   text-transform: uppercase;
 }
 
-/*КНОПКА В СОСТОЯНИИ НАВЕДЕНИЯ*/
+/*Кнопка при наведении*/
 button:hover {
   cursor: pointer;
 }
 
-/*КНОПКА В Tab*/
+/*Кнопка в Tab*/
 button:focus {
   outline: none;
 }
 
-/*КНОПКА МЕНЮ*/
+/*Кнопка меню*/
 .theme-menu__button {
   all: unset;
   position: relative;
@@ -76,7 +76,7 @@ button:focus {
   font-size: 14px;
 }
 
-/*НАЖАТАЯ КНОПКА МЕНЮ*/
+/*Нажатая кнопка меню*/
 .theme-menu__button:disabled {
   opacity: 0.6;
   pointer-events: none;
@@ -84,7 +84,7 @@ button:focus {
   transition-timing-function: ease;
 }
 
-/*НАЧ СОСТОЯНИЕ ПОДЧЕРКИВАНИЯ КНОПКИ МЕНЮ Tab*/
+/* Нач состояние подчеркивания кнопки меню Tab*/
 .theme-menu__button:before {
   position: absolute;
   border-bottom: 2px var(--text-color) solid;
@@ -96,7 +96,7 @@ button:focus {
   transform: scale(0, 1);
 }
 
-/*КОНЕЧ СОСТОЯНИЕ ПОДЧЕРКИВАНИЯ КНОПКИ МЕНЮ Tab*/
+/*Конеч состояние подчеркивания кнопки меню Tab*/
 .theme-menu__button:focus:before {
   position: absolute;
   width: 100%;
@@ -104,7 +104,7 @@ button:focus {
   transform: scale(1, 1);
 }
 
-/*ТРЕУГОЛЬНИК ПЕРЕД КНОПКОЙ МЕНЮ*/
+/*Треугольник перед кнопкой меню*/
 .theme-menu__button:disabled:before {
   content: "▶";
   position: absolute;
@@ -113,14 +113,14 @@ button:focus {
   left: -20px;
 }
 
-/*КНОПКА МЕНЮ В СОСТОЯНИИ НАВЕДЕНИЯ*/
+/*Кнопка меню при наведении*/
 .theme-menu__button:hover {
   opacity: 0.6;
   transition-duration: 0.3s;
   transition-timing-function: ease;
 }
 
-/*КАРТОЧКА*/
+/*Карточка*/
 .post {
   border: 2px black solid;
   background-color: var(--background-color);
@@ -131,7 +131,7 @@ button:focus {
   margin-block-end: 50px;
 }
 
-/*ЗАГОЛОВОК КАРТОЧКИ h3*/
+/*Заголовок карточки h3*/
 .heading {
   text-align: left;
   margin-inline-start: 10px;
@@ -143,7 +143,7 @@ button:focus {
   line-height: 21.78px;
 }
 
-/*ТЕКСТ КАРТОЧКИ*/
+/*Текст карточки*/
 .text {
   margin-inline-start: 25px;
   margin-inline-end: 25px;
@@ -155,7 +155,7 @@ button:focus {
   line-height: 21px;
 }
 
-/*БЛОК СЕРДЕЧКА И ЛАЙКА*/
+/*Блок сердца и лайка*/
 .post-button {
   display: flex;
   width: 169px;
@@ -166,7 +166,7 @@ button:focus {
   margin-inline-end: 25px;
 }
 
-/*КНОПКА, ОБОРАЧИВАЮЩАЯ ИКОНКУ СЕРДЕЧКА*/
+/*Кнопка, оборачивающая иконку сердца*/
 .card__icon-button {
   all: unset;
   width: 39px;
@@ -174,7 +174,7 @@ button:focus {
   margin-inline-end: 12px;
 }
 
-/*КНОПКА LIKE*/
+/*Кнопка лайк*/
 .card__like-button {
   all: unset;
   position: relative;
@@ -192,12 +192,12 @@ button:focus {
   background-color: var(--background-color);
 }
 
-/*КНОПКА LIKE В Tab*/
+/*Кнопка лайк в Tab*/
 .card__like-button:focus {
   box-shadow: 2px 2px 0 0 var(--text-color);
 }
 
-/*НАЧ СОСТОЯНИЕ ЗАЛИВКИ КНОПКИ LIKE ПРИ НАВЕДЕНИИ */
+/*Нач состояние заливки кнопки лайк при наведении*/
 .card__like-button:before {
   position: absolute;
   content: "";
@@ -205,7 +205,7 @@ button:focus {
   transform: translate(-100%);
 }
 
-/*КОНЕЧ СОСТОЯНИЕ ЗАЛИВКИ КНОПКИ LIKE ПРИ НАВЕДЕНИИ*/
+/* Конеч состояние заливки кнопки лайк при наведении*/
 .card__like-button:hover:before {
   position: absolute;
   width: 100%;
@@ -219,7 +219,7 @@ button:focus {
   z-index: 0;
 }
 
-/*ТЕКСТ КНОПКИ LIKE и FOOTER*/
+/*Текст кнопки лайк и футер-кнопки*/
 .button__text {
   font-family: var(--accent-font);
   font-weight: 400;
@@ -230,14 +230,14 @@ button:focus {
   position: relative;
 }
 
-/*ТЕКСТ КНОПКИ LIKE и FOOTER ПРИ НАВЕДЕНИИ*/
+/*Текст кнопки лайк и футер-кнопки при наведении*/
 .button__text:hover {
   mix-blend-mode: difference;
   color: var(--background-color);
   fill: var(--background-color);
 }
 
-/*КНОПКА В FOOTER*/
+/*Футер-кнопка*/
 .footer__button {
   all: unset;
   position: relative;
@@ -251,12 +251,12 @@ button:focus {
   z-index: 1;
 }
 
-/*КНОПКА FOOTER В Tab*/
+/*Футер-кнопка в Tab*/
 .footer__button:focus {
   box-shadow: 2px 2px 0 0 var(--text-color);
 }
 
-/*НАЧ СОСТОЯНИЕ ЗАЛИВКИ КНОПКИ FOOTER ПРИ НАВЕДЕНИИ*/
+/*Нач состояние заливки футер-кнопки при наведении*/
 .footer__button:before {
   position: absolute;
   content: "";
@@ -266,7 +266,7 @@ button:focus {
   transform: translate(-100%);
 }
 
-/*КОНЕЧ СОСТОЯНИЕ ЗАЛИВКИ КНОПКИ FOOTER ПРИ НАВЕДЕНИИ*/
+/*Конеч состояние заливки футер-кнопки при наведении*/
 .footer__button:hover:before {
   position: absolute;
   width: 100%;
@@ -278,7 +278,7 @@ button:focus {
   z-index: 1;
 }
 
-/*ИКОНКА ДИСКЕТЫ*/
+/*Иконка дискеты*/
 .floppy_icon {
   width: 21px;
   height: 21px;
@@ -286,7 +286,7 @@ button:focus {
   fill: var(--text-color);
 }
 
-/*(!!! ЕЁ ЗАКРЫВАЕТ ПОЛОСА ЗАГРУЗКИ) ИКОНКА ДИСКЕТЫ ПРИ НАВЕДЕНИИ*/
+/*(!!! ЕЁ ЗАКРЫВАЕТ ПОЛОСА ЗАГРУЗКИ) Иконка дискеты при наведении*/
 .floppy_icon:hover {
   z-index: 4;
   position: relative;
@@ -294,23 +294,17 @@ button:focus {
   fill: var(--background-color);
 }
 
-/*УБРАЛИ ДЕФОЛТНОЕ ЗНАЧЕНИЕ КНОПКИ СЕРДЦА ПРИ Tab*/
+/*Убрала дефолт знач-е кнопки сердца при Tab*/
 .card__icon-button:focus {
   outline: none;
 }
 
-/*КНОПКА СЕРДЦА ПРИ Tab*/
+/*Кнопка сердца при Tab*/
 .card__icon-button:focus-visible {
   border: 2px solid var(--text-color);
   transition-duration: 0.3s;
   transition-timing-function: ease;
 }
-
-/*(!!!УБРАТЬ?)КНОПКА СЕРДЦА
-.card__icon-button {
-  border: 1px red solid;
-}
-*/
 
 /*Блестки*/
 .sparks {
@@ -367,24 +361,40 @@ button:focus {
 /*Контур */
 .contour {
   fill: var(--text-color);
+  transition: 0.1s;
+}
+
+/*Сердце при клике*/
+.like-icon.is-liked .heart {
+  fill: var(--heart-color);
+  animation: heart 0.3s 1 reverse ease-in 0.1s;
+  transform-origin: center;
 }
 
 /*Сердцевина при клике*/
-.like-icon .is-liked .core {
+.like-icon.is-liked .core {
+  transition: 0.3s 0.03s;
 }
 
 /*Основная часть сердца при клике*/
-.like-icon .is-liked .main-body {
+.like-icon.is-liked .main-body {
+  transition: 0.3s 0.05s;
 }
 
-/*Контур при клике (!ПОСМОТРЕТЬ ПРОБЕЛЫ НУЖНЫ ИЛИ КЛАССЫ СПЛОШЬ ИДУТ)*/
-.like-icon .is-liked .contour {
-}
-
-/*Увеличение сердца при клике*/
-.like-icon .is-liked .main-body {
+/*Контур при клике*/
+.like-icon.is-liked .contour {
+  transition: 0.3s 0.06s;
+  fill: var(--heart-color);
 }
 
 /*Искры при клике*/
-.like-icon .is-liked .sparks {
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s 1 reverse ease-in 0.3s;
+}
+
+/*Всплывающее окно*/
+dialog {
+  border-width: 2px;
+  inline-size: 353px;
+  block-size: 191px;
 }

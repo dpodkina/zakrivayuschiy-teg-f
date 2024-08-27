@@ -282,12 +282,22 @@
       </section>
     </main>
     <footer class="footer">
-      <button class="footer__button">
+      <button class="footer__button" type="button" 
+      onclick="window['dialog-id'].showModal()" 
+      aria-controls="dialog-id">
         <span class="button__text"><svg class="floppy_icon">
           <use href="#floppy">
         </svg></span>
         <span class="button__text">Сохранить на память</span>
       </button>
+      <dialog id="dialog-id">
+        <svg class="floppy_icon">
+          <use href="#floppy">
+        </svg>
+        <h2>Вставьте
+          дискету, чтобы продолжить</h2>
+          <button>ок</button>
+      </dialog>
     </footer>
     <script src="./scripts/like.js"></script>
   </body>
