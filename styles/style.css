@@ -286,6 +286,7 @@ button:focus {
   fill: var(--text-color);
 }
 
+/*(!!! ЕЁ ЗАКРЫВАЕТ ПОЛОСА ЗАГРУЗКИ) ИКОНКА ДИСКЕТЫ ПРИ НАВЕДЕНИИ*/
 .floppy_icon:hover {
   z-index: 4;
   position: relative;
@@ -293,41 +294,97 @@ button:focus {
   fill: var(--background-color);
 }
 
+/*УБРАЛИ ДЕФОЛТНОЕ ЗНАЧЕНИЕ КНОПКИ СЕРДЦА ПРИ Tab*/
 .card__icon-button:focus {
   outline: none;
 }
 
+/*КНОПКА СЕРДЦА ПРИ Tab*/
 .card__icon-button:focus-visible {
   border: 2px solid var(--text-color);
   transition-duration: 0.3s;
   transition-timing-function: ease;
 }
 
-/*БЛЕСТКИ*/
+/*(!!!УБРАТЬ?)КНОПКА СЕРДЦА
+.card__icon-button {
+  border: 1px red solid;
+}
+*/
+
+/*Блестки*/
 .sparks {
   fill: var(--heart-color);
   opacity: 0;
 }
 
-/*КОНТУР*/
+/*Сердце*/
+.heart {
+  fill: transparent;
+  transition: fill 0.3s;
+}
+
+/*Сердце при наведении*/
+.heart:hover {
+  fill: var(--text-color);
+}
+
+/*Сердце при зажатии*/
+.heart:active {
+  fill: var(--heart-color);
+}
+
+/*Сердцевина*/
+.core {
+  transition: 0.3s;
+}
+
+/*Сердцевина при наведении*/
+.core:hover {
+  transition: 0.3s 0.03s;
+}
+
+/*Сердцевина при зажатии*/
+.core:active {
+  transition: 0.3s 0.03s;
+}
+
+/*Основная часть сердца*/
+.main-body {
+  transition: 0.3s 0.05s;
+}
+
+/*Основная часть сердца при наведении*/
+.main-body:hover {
+  transition: 0.3s;
+}
+
+/*Основная часть сердца при зажатии*/
+.main-body:active {
+  transition: 0.3s;
+}
+
+/*Контур */
 .contour {
   fill: var(--text-color);
 }
 
-/*СЕРДЕЧКО*/
-.heart {
-  fill: transparent;
+/*Сердцевина при клике*/
+.like-icon .is-liked .core {
 }
 
-.heart:hover {
-  fill: black;
+/*Основная часть сердца при клике*/
+.like-icon .is-liked .main-body {
 }
 
-.main-body {
-  transition: fill 3s;
-  fill: transparent;
+/*Контур при клике (!ПОСМОТРЕТЬ ПРОБЕЛЫ НУЖНЫ ИЛИ КЛАССЫ СПЛОШЬ ИДУТ)*/
+.like-icon .is-liked .contour {
 }
 
-.main-body:hover {
-  fill: blue;
+/*Увеличение сердца при клике*/
+.like-icon .is-liked .main-body {
+}
+
+/*Искры при клике*/
+.like-icon .is-liked .sparks {
 }
