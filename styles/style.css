@@ -392,9 +392,60 @@ button:focus {
   animation: sparks 0.3s 1 reverse ease-in 0.3s;
 }
 
-/*Всплывающее окно*/
+/*Модальное окно*/
 dialog {
-  border-width: 2px;
+  display: grid;
+}
+
+/*Скрыли модальное окно*/
+dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+/*Св-ва модального окна*/
+dialog [open] {
+  border: 2px;
   inline-size: 353px;
   block-size: 191px;
+}
+
+/*Задний фон*/
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.7);
+}
+
+.floppy_icon2 {
+  position: absolute;
+  left: 30px;
+  top: 42px;
+  width: 39px;
+  height: 39px;
+}
+
+.dialog2 {
+  inline-size: 293px;
+  block-size: 63px;
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin-inline-start: 75px;
+  padding-inline-end: 70px;
+  margin-block-start: 15px;
+  margin-block-end: 30px;
+  text-align: left;
+}
+
+.dialog-button {
+  all: unset;
+  border: 2px solid black;
+  inline-size: 90%;
+  block-size: 38px;
+  margin-inline-start: 15px;
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
 }
