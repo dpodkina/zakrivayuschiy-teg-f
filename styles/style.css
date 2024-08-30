@@ -449,3 +449,35 @@ dialog::backdrop {
   font-size: 14px;
   text-transform: uppercase;
 }
+
+.sun {
+  filter: brightness(110%);
+}
+
+.focus {
+  filter: contrast(110%);
+}
+
+.office {
+  filter: grayscale(0.8);
+}
+
+.study {
+  filter: blur(0.1rem);
+}
+
+.table {
+  filter: opacity(0.8);
+}
+
+.clock {
+  filter: saturate(158%);
+}
+
+.designer {
+  filter: hue-rotate(-90deg);
+}
+
+.library {
+  filter: hue-rotate(-45deg) contrast(110%);
+}
