@@ -19,7 +19,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font, sans-serif);
-  font-weight: var(--font-weight-text);
+  font-weight: var(--font-variation-settings);
   background-color: var(--background-color, #ffffff);
   color: var(--text-color);
   background-image: var(--background-image);
@@ -43,7 +43,8 @@
   justify-content: center;
   font-family: var(--accent-font);
   padding-block-start: 136px;
-  font-size: clamp(0.875rem, -0.2514rem + 4.7932vw, 4.0625rem);
+  font-size: clamp(1.1875rem, 0.1752rem + 4.3192vw, 4.0625rem);
+  /*font-size: clamp(0.875rem, -0.2514rem + 4.7932vw, 4.0625rem);*/
 }
 
 /*Подзаголовок h2*/
@@ -415,6 +416,7 @@ dialog::backdrop {
   background-color: rgb(0 0 0 / 0.7);
 }
 
+/*Иконка в модальном окне*/
 .floppy_icon2 {
   position: absolute;
   left: 30px;
@@ -423,6 +425,7 @@ dialog::backdrop {
   height: 39px;
 }
 
+/*Текст в модальном окне*/
 .dialog2 {
   inline-size: 293px;
   block-size: 63px;
@@ -438,6 +441,7 @@ dialog::backdrop {
   text-align: left;
 }
 
+/*Кнопка в модальном окне*/
 .dialog-button {
   all: unset;
   border: 2px solid black;
@@ -450,6 +454,7 @@ dialog::backdrop {
   text-transform: uppercase;
 }
 
+/*Фильтры для изображений*/
 .sun {
   filter: brightness(110%);
 }
@@ -480,4 +485,104 @@ dialog::backdrop {
 
 .library {
   filter: hue-rotate(-45deg) contrast(110%);
+}
+
+@media (width <= 375px) and (orientation: portrait) {
+  /*Страница*/
+  .page {
+    margin: 0;
+    min-height: 100dvh;
+    min-width: 100dvw;
+  }
+
+  /*Шапка*/
+  .header {
+    min-height: 50dvh;
+    min-width: 100dvw;
+    margin: 102px 0;
+  }
+
+  /*Заголовок h1*/
+  .header__title {
+    font-size: clamp(1.875rem, -5.0341rem + 34.5455vw, 3.0625rem);
+    padding-block-start: 120px;
+  }
+
+  /*Подзаголовок h2*/
+  .header__subtitle {
+    font-size: clamp(0.625rem, -0.8295rem + 7.2727vw, 0.875rem);
+    margin-block-end: 25px;
+  }
+
+  /*Карточка*/
+  .post {
+    min-height: 100dvh;
+    min-inline-size: 100dvw;
+    margin-block-end: 50px;
+  }
+
+  /*Заголовок карточки h3*/
+  .heading {
+    margin-inline-end: 30px;
+    margin-block-end: 7px;
+  }
+
+  /*Текст карточки*/
+  .text {
+    margin-block-start: 27px;
+  }
+
+  /*Футер-кнопка*/
+  .footer__button {
+    inline-size: 82%;
+    block-size: 8dvh;
+  }
+
+  /*Иконка дискеты*/
+  .floppy_icon {
+    width: 28px;
+    height: 28px;
+    left: 45%;
+    top: 20px;
+    position: absolute;
+  }
+  /*Tекст футер-кнопки*/
+  .button__finish {
+    margin-block-start: 32px;
+  }
+
+  /*Св-ва модального окна*/
+  dialog [open] {
+    border: 2px;
+    inline-size: 341px;
+    block-size: 191px;
+  }
+
+  /*Иконка в модальном окне*/
+  .floppy_icon2 {
+    left: 30px;
+    top: 42px;
+  }
+
+  /*Текст в модальном окне*/
+  .dialog2 {
+    inline-size: 198px;
+    margin-inline-start: 75px;
+    margin-block-start: 22px;
+    margin-block-end: 25px;
+    padding: 0;
+  }
+
+  /*Кнопка в модальном окне*/
+  .dialog-button {
+    all: unset;
+    border: 2px solid black;
+    inline-size: 70%;
+    block-size: 38px;
+    margin-inline-start: 42px;
+    font-family: var(--accent-font);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
 }
