@@ -11,6 +11,7 @@
   --font-weight-text: 400;
   --background-color: #ffffff;
   --text-color: #000000;
+  --text-stroke: #ffffff;
   --background-image: repeating-linear-gradient(
       #d3d3d3,
       #d3d3d3 2px,
@@ -33,6 +34,7 @@
   --font-weight-text: 465;
   --background-color: #000000;
   --text-color: #00cc14;
+  --text-stroke: #000000;
   --background-image: repeating-linear-gradient(
       #000,
       #000 2px,
