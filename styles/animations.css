@@ -42,3 +42,91 @@
     opacity: 1;
   }
 }
+
+/*Блестки*/
+.sparks {
+  fill: var(--heart-color);
+  opacity: 0;
+}
+
+/*Сердце*/
+.heart {
+  fill: transparent;
+  transition: fill 0.3s;
+}
+
+/*Сердце при наведении*/
+.heart:hover {
+  fill: var(--text-color);
+  animation-timing-function: linear;
+}
+
+/*Сердце при зажатии*/
+.heart:active {
+  fill: var(--heart-color);
+  animation-timing-function: linear;
+}
+
+/*Сердцевина*/
+.core {
+  transition: 0.3s;
+}
+
+/*Сердцевина при наведении*/
+.core:hover {
+  transition: 0.3s 0.03s;
+}
+
+/*Сердцевина при зажатии*/
+.core:active {
+  transition: 0.3s 0.03s;
+}
+
+/*Основная часть сердца*/
+.main-body {
+  transition: 0.3s 0.05s;
+}
+
+/*Основная часть сердца при наведении*/
+.main-body:hover {
+  transition: 0.3s;
+}
+
+/*Основная часть сердца при зажатии*/
+.main-body:active {
+  transition: 0.3s;
+}
+
+/*Контур */
+.contour {
+  fill: var(--text-color);
+  transition: 0.1s;
+}
+
+/*Сердце при клике*/
+.like-icon.is-liked .heart {
+  fill: var(--heart-color);
+  animation: heart 0.3s 1 reverse ease-in 0.1s;
+  transform-origin: center;
+}
+
+/*Сердцевина при клике*/
+.like-icon.is-liked .core {
+  transition: 0.3s 0.03s;
+}
+
+/*Основная часть сердца при клике*/
+.like-icon.is-liked .main-body {
+  transition: 0.3s 0.05s;
+}
+
+/*Контур при клике*/
+.like-icon.is-liked .contour {
+  transition: 0.3s 0.06s;
+  fill: var(--heart-color);
+}
+
+/*Искры при клике*/
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s 1 reverse ease-in 0.3s;
+}

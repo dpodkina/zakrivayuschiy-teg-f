@@ -19,12 +19,12 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font, sans-serif);
-  font-weight: var(--font-variation-settings);
+  font-variation-settings: "wght" 400;
   background-color: var(--background-color, #ffffff);
   color: var(--text-color);
   background-image: var(--background-image);
   background-size: cover;
-  background-attachment: local;
+  background-attachment: fixed;
   text-align: center;
 }
 
@@ -45,6 +45,10 @@
   padding-block-start: 136px;
   font-size: clamp(1.1875rem, 0.1752rem + 4.3192vw, 4.0625rem);
   /*font-size: clamp(0.875rem, -0.2514rem + 4.7932vw, 4.0625rem);*/
+}
+
+.header__title a {
+  text-decoration: none;
 }
 
 /*Подзаголовок h2*/
@@ -139,7 +143,7 @@ button:focus {
   margin-block-start: 3px;
   margin-block-end: 3px;
   font-family: var(--main-font);
-  font-weight: 700;
+  font-variation-settings: "wght" 700;
   font-size: 18px;
   line-height: 21.78px;
 }
@@ -160,7 +164,6 @@ button:focus {
 .post-button {
   display: flex;
   width: 169px;
-  height: 38px;
   margin-block-start: 25px;
   margin-block-end: 25px;
   align-self: self-end;
@@ -307,92 +310,6 @@ button:focus {
   transition-timing-function: ease;
 }
 
-/*Блестки*/
-.sparks {
-  fill: var(--heart-color);
-  opacity: 0;
-}
-
-/*Сердце*/
-.heart {
-  fill: transparent;
-  transition: fill 0.3s;
-}
-
-/*Сердце при наведении*/
-.heart:hover {
-  fill: var(--text-color);
-}
-
-/*Сердце при зажатии*/
-.heart:active {
-  fill: var(--heart-color);
-}
-
-/*Сердцевина*/
-.core {
-  transition: 0.3s;
-}
-
-/*Сердцевина при наведении*/
-.core:hover {
-  transition: 0.3s 0.03s;
-}
-
-/*Сердцевина при зажатии*/
-.core:active {
-  transition: 0.3s 0.03s;
-}
-
-/*Основная часть сердца*/
-.main-body {
-  transition: 0.3s 0.05s;
-}
-
-/*Основная часть сердца при наведении*/
-.main-body:hover {
-  transition: 0.3s;
-}
-
-/*Основная часть сердца при зажатии*/
-.main-body:active {
-  transition: 0.3s;
-}
-
-/*Контур */
-.contour {
-  fill: var(--text-color);
-  transition: 0.1s;
-}
-
-/*Сердце при клике*/
-.like-icon.is-liked .heart {
-  fill: var(--heart-color);
-  animation: heart 0.3s 1 reverse ease-in 0.1s;
-  transform-origin: center;
-}
-
-/*Сердцевина при клике*/
-.like-icon.is-liked .core {
-  transition: 0.3s 0.03s;
-}
-
-/*Основная часть сердца при клике*/
-.like-icon.is-liked .main-body {
-  transition: 0.3s 0.05s;
-}
-
-/*Контур при клике*/
-.like-icon.is-liked .contour {
-  transition: 0.3s 0.06s;
-  fill: var(--heart-color);
-}
-
-/*Искры при клике*/
-.like-icon.is-liked .sparks {
-  animation: sparks 0.3s 1 reverse ease-in 0.3s;
-}
-
 /*Модальное окно*/
 dialog {
   display: grid;
@@ -417,7 +334,7 @@ dialog::backdrop {
 }
 
 /*Иконка в модальном окне*/
-.floppy_icon2 {
+.dialog-floppy_icon {
   position: absolute;
   left: 30px;
   top: 42px;
@@ -426,7 +343,7 @@ dialog::backdrop {
 }
 
 /*Текст в модальном окне*/
-.dialog2 {
+.dialog-content {
   inline-size: 293px;
   block-size: 63px;
   font-family: var(--accent-font);
@@ -623,13 +540,13 @@ dialog::backdrop {
   }
 
   /*Иконка в модальном окне*/
-  .floppy_icon2 {
+  .dialog-floppy_icon {
     left: 30px;
     top: 42px;
   }
 
   /*Текст в модальном окне*/
-  .dialog2 {
+  .dialog-content {
     inline-size: 198px;
     margin-inline-start: 75px;
     margin-block-start: 22px;
