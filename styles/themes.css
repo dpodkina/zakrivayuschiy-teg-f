@@ -109,36 +109,4 @@
   .background {
     background-image: var(--background-image);
   }
-
-  /*КНОПКА FOOTER В Tab*/
-  .footer__button:focus {
-    box-shadow: 2px 2px 0 0 var(--text-color);
-  }
-
-  /*КНОПКА LIKE*/
-  .card__like-button {
-    z-index: 0;
-    background-color: var(--background-color);
-  }
-
-  .card__like-button:hover:before {
-    background-color: var(--text-color);
-    z-index: 0;
-  }
-
-  /*ТЕКСТ КНОПКИ LIKE и FOOTER*/
-  .button__text {
-    color: var(--text-color);
-  }
-
-  /*ТЕКСТ КНОПКИ LIKE и FOOTER ПРИ НАВЕДЕНИИ*/
-  .button__text:hover {
-    color: var(--background-color), #000000;
-  }
-
-  /*КОНЕЧ СОСТОЯНИЕ ЗАЛИВКИ КНОПКИ FOOTER ПРИ НАВЕДЕНИИ*/
-  .footer__button:hover:before {
-    background-color: var(--text-color);
-    z-index: 1;
-  }
 }

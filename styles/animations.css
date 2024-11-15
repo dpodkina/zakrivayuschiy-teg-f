@@ -47,12 +47,14 @@
 .sparks {
   fill: var(--heart-color);
   opacity: 0;
+  animation-timing-function: linear;
 }
 
 /*Сердце*/
 .heart {
   fill: transparent;
   transition: fill 0.3s;
+  animation-timing-function: linear;
 }
 
 /*Сердце при наведении*/
@@ -70,37 +72,44 @@
 /*Сердцевина*/
 .core {
   transition: 0.3s;
+  animation-timing-function: linear;
 }
 
 /*Сердцевина при наведении*/
 .core:hover {
   transition: 0.3s 0.03s;
+  animation-timing-function: linear;
 }
 
 /*Сердцевина при зажатии*/
 .core:active {
   transition: 0.3s 0.03s;
+  animation-timing-function: linear;
 }
 
 /*Основная часть сердца*/
 .main-body {
   transition: 0.3s 0.05s;
+  animation-timing-function: linear;
 }
 
 /*Основная часть сердца при наведении*/
 .main-body:hover {
   transition: 0.3s;
+  animation-timing-function: linear;
 }
 
 /*Основная часть сердца при зажатии*/
 .main-body:active {
   transition: 0.3s;
+  animation-timing-function: linear;
 }
 
 /*Контур */
 .contour {
   fill: var(--text-color);
   transition: 0.1s;
+  animation-timing-function: linear;
 }
 
 /*Сердце при клике*/
@@ -113,17 +122,20 @@
 /*Сердцевина при клике*/
 .like-icon.is-liked .core {
   transition: 0.3s 0.03s;
+  animation-timing-function: linear;
 }
 
 /*Основная часть сердца при клике*/
 .like-icon.is-liked .main-body {
   transition: 0.3s 0.05s;
+  animation-timing-function: linear;
 }
 
 /*Контур при клике*/
 .like-icon.is-liked .contour {
   transition: 0.3s 0.06s;
   fill: var(--heart-color);
+  animation-timing-function: linear;
 }
 
 /*Искры при клике*/
