@@ -17,7 +17,8 @@
 /*Страница*/
 .page {
   min-inline-size: 320px;
-  min-block-size: 100dvb;
+  max-height: 7030px;
+  /* min-block-size: 100dvb;*/
   font-family: var(--main-font, sans-serif);
   font-variation-settings: "wght" 400;
   background-color: var(--background-color, #ffffff);
@@ -26,6 +27,7 @@
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
+  margin-bottom: 0;
 }
 
 /*Шапка*/
@@ -256,6 +258,8 @@ span {
   inline-size: 23%;
   padding-block-start: 15px;
   padding-block-end: 18.5px;
+  overflow: hidden;
+  margin-bottom: 0;
 }
 
 /*Футер-кнопка в Tab*/
@@ -305,7 +309,7 @@ span {
 dialog {
   display: grid;
   border: var(--text-color) solid 2px;
-  background-color: var(--text-stroke);
+  background-color: var(--background-color);
 }
 
 /*Скрыли модальное окно*/
@@ -364,6 +368,11 @@ dialog::backdrop {
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
+  overflow: hidden;
+}
+
+.dialog-button:focus {
+  box-shadow: 2px 2px 0 0 var(--text-color);
 }
 
 /*Без данного селектора не видно лейбла. К тому же, в требованиях к проекту написано "Для этого вокруг изображения придётся создать обёртку, в этом контейнере будет лежать изображение и текстовый элемент."*/
@@ -406,7 +415,8 @@ dialog::backdrop {
   background-size: cover;
   width: 100%;
   z-index: 1;
-  border: var(--text-color) 2px solid;
+  border-bottom: var(--text-color) 2px solid;
+  border-top: var(--text-color) 2px solid;
 }
 
 .sun {
@@ -538,5 +548,6 @@ dialog::backdrop {
     font-weight: 400;
     font-size: 14px;
     text-transform: uppercase;
+    overflow: hidden;
   }
 }
