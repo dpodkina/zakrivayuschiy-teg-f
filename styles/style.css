@@ -519,9 +519,9 @@ dialog::backdrop {
     top: 20px;
     position: absolute;
   }
-  /*Tекст футер-кнопки*/
-  .button__finish {
-    margin-block-start: 32px;
+
+  .button-finish {
+    margin-block-start: 40px;
   }
 
   /*Св-ва модального окна*/
