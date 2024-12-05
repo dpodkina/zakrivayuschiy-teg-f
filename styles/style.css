@@ -17,7 +17,6 @@
 /*Страница*/
 .page {
   min-inline-size: 320px;
-  max-height: 7030px;
   /* min-block-size: 100dvb;*/
   font-family: var(--main-font, sans-serif);
   font-variation-settings: "wght" 400;
@@ -37,7 +36,7 @@
   inline-size: 48%;
   display: inline-block;
   margin-block-start: 100px;
-  margin-block-end: 100px;
+  margin-block-end: 106px;
 }
 
 /*Заголовок h1*/
@@ -57,7 +56,7 @@
   justify-content: center;
   font-family: var(--accent-font);
   margin-block-start: 20px;
-  margin-block-end: 25px;
+  margin-block-end: 22px;
   font-size: clamp(0.875rem, 0.6762rem + 0.8459vw, 1.4375rem);
   text-transform: uppercase;
 }
@@ -70,6 +69,11 @@ button:hover {
 /*Кнопка в Tab*/
 button:focus {
   outline: none;
+}
+
+.theme-menu__list {
+  text-align: left;
+  margin-inline-start: 45%;
 }
 
 /*Кнопка меню*/
@@ -134,7 +138,7 @@ button:focus {
   flex-direction: column;
   inline-size: 48%;
   margin: 0 auto;
-  margin-block-end: 50px;
+  margin-block-end: 45px;
 }
 
 /*Заголовок карточки h3*/
@@ -152,7 +156,7 @@ button:focus {
 /*Текст карточки*/
 .text {
   margin-inline-start: 25px;
-  margin-inline-end: 25px;
+  margin-inline-end: 16px;
   margin-block-start: 25px;
   text-align: start;
   font-family: var(--main-font);
@@ -255,11 +259,11 @@ span {
   position: relative;
   border: 2px var(--text-color) solid;
   background-color: var(--background-color);
-  inline-size: 23%;
+  inline-size: 23vw;
   padding-block-start: 15px;
   padding-block-end: 18.5px;
   overflow: hidden;
-  margin-bottom: 0;
+  margin-bottom: 105px;
 }
 
 /*Футер-кнопка в Tab*/
@@ -461,9 +465,9 @@ dialog::backdrop {
 
   /*Шапка*/
   .header {
-    min-height: 50dvh;
+    min-height: 49dvh;
     min-width: 100dvw;
-    margin: 102px 0;
+    margin: 100px 0;
   }
 
   /*Заголовок h1*/
@@ -476,6 +480,10 @@ dialog::backdrop {
   .header__subtitle {
     font-size: clamp(0.625rem, -0.8295rem + 7.2727vw, 0.875rem);
     margin-block-end: 25px;
+  }
+
+  .theme-menu__list {
+    margin-inline-start: 41%;
   }
 
   /*Карточка*/
@@ -493,7 +501,8 @@ dialog::backdrop {
 
   /*Текст карточки*/
   .text {
-    margin-block-start: 27px;
+    margin-block-start: 22px;
+    margin-inline-end: 25px;
   }
 
   /*Футер-кнопка*/
