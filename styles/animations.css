@@ -140,5 +140,5 @@
 
 /*Искры при клике*/
 .like-icon.is-liked .sparks {
-  animation: sparks 0.3s 1 reverse ease-in 0.27s;
+  animation: sparks 0.4s 1 reverse ease-in 0.4s;
 }

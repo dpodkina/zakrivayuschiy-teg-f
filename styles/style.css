@@ -16,8 +16,6 @@
 
 /*Страница*/
 .page {
-  min-inline-size: 320px;
-  /* min-block-size: 100dvb;*/
   font-family: var(--main-font, sans-serif);
   font-variation-settings: "wght" 400;
   background-color: var(--background-color, #ffffff);
@@ -27,16 +25,18 @@
   background-attachment: fixed;
   text-align: center;
   margin-bottom: 0;
+  bottom: 0;
+  padding-bottom: 0;
 }
 
 /*Шапка*/
 .header {
   border: 2px var(--text-color) solid;
   background-color: var(--background-color);
-  inline-size: 48%;
+  inline-size: 48.5vw;
   display: inline-block;
   margin-block-start: 100px;
-  margin-block-end: 106px;
+  margin-block-end: 98px;
 }
 
 /*Заголовок h1*/
@@ -74,6 +74,10 @@ button:focus {
 .theme-menu__list {
   text-align: left;
   margin-inline-start: 45%;
+}
+
+.theme-menu__list:last-child {
+  margin-block-end: 10px;
 }
 
 /*Кнопка меню*/
@@ -136,17 +140,17 @@ button:focus {
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
-  inline-size: 48%;
+  inline-size: 48.5vw;
   margin: 0 auto;
-  margin-block-end: 45px;
+  margin-block-end: 50px;
 }
 
 /*Заголовок карточки h3*/
 .heading {
   text-align: left;
   margin-inline-start: 10px;
-  margin-block-start: 3px;
-  margin-block-end: 3px;
+  margin-block-start: 4px;
+  margin-block-end: 4px;
   font-family: var(--main-font);
   font-variation-settings: "wght" 700;
   font-size: 18px;
@@ -156,19 +160,21 @@ button:focus {
 /*Текст карточки*/
 .text {
   margin-inline-start: 25px;
-  margin-inline-end: 16px;
+  margin-inline-end: 23px;
   margin-block-start: 25px;
   text-align: start;
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  overflow-wrap: anywhere;
 }
 
 /*Блок сердца и лайка*/
 .post-button {
   display: flex;
-  width: 169px;
+  width: 175px;
+  margin-inline-start: auto;
   margin-block-start: 25px;
   margin-block-end: 25px;
   align-self: self-end;
@@ -178,17 +184,18 @@ button:focus {
 /*Кнопка, оборачивающая иконку сердца*/
 .card__icon-button {
   all: unset;
-  width: 39px;
+  width: 70px;
   height: 36px;
-  margin-inline-end: 12px;
+  padding-block-start: 3px;
+  padding-inline-end: 5px;
 }
 
 /*Кнопка лайк*/
 .card__like-button {
   all: unset;
   position: relative;
-  width: 130px;
-  height: 36px;
+  width: 230px;
+  height: 34px;
   border: 2px var(--text-color) solid;
   font-family: var(--accent-font);
   font-weight: 400;
@@ -246,7 +253,7 @@ span {
   display: inline-block;
 }
 
-/*Текст кнопки лайк и футер-кнопки при наведении*/
+/*Текст кнопки лайк при наведении  */
 .button__text:hover {
   background-blend-mode: difference;
   color: var(--background-color);
@@ -261,9 +268,24 @@ span {
   background-color: var(--background-color);
   inline-size: 23vw;
   padding-block-start: 15px;
-  padding-block-end: 18.5px;
+  padding-block-end: 15px;
   overflow: hidden;
-  margin-bottom: 105px;
+  overflow-wrap: anywhere;
+}
+
+/*Текст футер-кнопки при наведении*/
+.footer__button:hover .button__text {
+  background-blend-mode: difference;
+  color: var(--background-color);
+  z-index: 3;
+}
+
+/*Иконка футер-кнопки при наведении*/
+.footer__button:hover .floppy_icon {
+  background-blend-mode: difference;
+  color: var(--background-color);
+  fill: var(--background-color);
+  z-index: 3;
 }
 
 /*Футер-кнопка в Tab*/
@@ -280,21 +302,7 @@ span {
   margin-inline-end: 3.5px;
   color: var(--text-color);
   z-index: 2;
-}
-
-.floppy_icon:hover {
-  background-blend-mode: difference;
-  color: var(--background-color);
-  fill: var(--background-color);
-  z-index: 3;
-}
-
-/*(!!! ЕЁ ЗАКРЫВАЕТ ПОЛОСА ЗАГРУЗКИ) Иконка дискеты при наведении*/
-.floppy_icon:hover {
-  z-index: 4;
-  position: relative;
-  mix-blend-mode: difference;
-  fill: var(--background-color);
+  transition: color 0.6s;
 }
 
 /*Убрала дефолт знач-е кнопки сердца при Tab*/
@@ -392,6 +400,7 @@ dialog::backdrop {
   position: absolute;
   top: 27px;
   right: 25px;
+  margin-inline-start: auto;
   z-index: 3;
   text-transform: uppercase;
   font-family: var(--accent-font);
@@ -455,6 +464,20 @@ dialog::backdrop {
   filter: hue-rotate(-45deg) contrast(110%);
 }
 
+@media (width <= 1439px) {
+  .header {
+    min-width: 60dvw;
+  }
+
+  .post {
+    min-width: 60dvw;
+  }
+
+  .footer__button {
+    min-width: 30dvw;
+  }
+}
+
 @media (width <= 375px) and (orientation: portrait) {
   /*Страница*/
   .page {
@@ -467,7 +490,7 @@ dialog::backdrop {
   .header {
     min-height: 49dvh;
     min-width: 100dvw;
-    margin: 100px 0;
+    margin: 99px 0 99px 0;
   }
 
   /*Заголовок h1*/
@@ -479,7 +502,7 @@ dialog::backdrop {
   /*Подзаголовок h2*/
   .header__subtitle {
     font-size: clamp(0.625rem, -0.8295rem + 7.2727vw, 0.875rem);
-    margin-block-end: 25px;
+    margin-block-end: 21px;
   }
 
   .theme-menu__list {
@@ -501,8 +524,12 @@ dialog::backdrop {
 
   /*Текст карточки*/
   .text {
-    margin-block-start: 22px;
+    margin-block-start: 20px;
     margin-inline-end: 25px;
+  }
+
+  .text:nth-of-type(2) {
+    margin-block-start: 25px;
   }
 
   /*Футер-кнопка*/

@@ -53,7 +53,7 @@
 
 /*ПРЕДПОЧТ СВЕТЛОЙ ТЕМЫ*/
 @media (prefers-color-scheme: light) {
-  :root.theme-light {
+  :root {
     --font-weight-heading: 700;
     --font-weight-text: 400;
     --background-color: #ffffff;
@@ -84,32 +84,9 @@
   }
 }
 
-@media (prefers-color-scheme: light) {
-  :root.theme-auto {
-    --font-weight-heading: 700;
-    --font-weight-text: 400;
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --background-image: repeating-linear-gradient(
-        #d3d3d3,
-        #d3d3d3 2px,
-        transparent 2px,
-        transparent 4px
-      ),
-      repeating-linear-gradient(
-        90deg,
-        #d3d3d3,
-        #d3d3d3 2px,
-        transparent 2px,
-        transparent 4px
-      ),
-      linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a);
-  }
-}
-
 /*ПРЕДПОЧТ ТЕМНОЙ ТЕМЫ*/
 @media (prefers-color-scheme: dark) {
-  :root.theme-dark {
+  :root {
     --font-weight-heading: 785;
     --font-weight-text: 465;
     --background-color: #000000;
@@ -133,28 +110,5 @@
 
   .background {
     background-image: var(--background-image);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root.theme-auto {
-    --font-weight-heading: 785;
-    --font-weight-text: 465;
-    --background-color: #000000;
-    --text-color: #00cc14;
-    --background-image: repeating-linear-gradient(
-        #000,
-        #000 2px,
-        transparent 2px,
-        transparent 4px
-      ),
-      repeating-linear-gradient(
-        90deg,
-        #000,
-        #000 2px,
-        transparent 2px,
-        transparent 4px
-      ),
-      linear-gradient(180deg, #007f0c, #004306);
   }
 }
