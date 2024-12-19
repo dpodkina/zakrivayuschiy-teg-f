@@ -24,9 +24,7 @@
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
-  margin-bottom: 0;
-  bottom: 0;
-  padding-bottom: 0;
+  margin-block-end: 105px;
 }
 
 /*Шапка*/
@@ -464,24 +462,9 @@ dialog::backdrop {
   filter: hue-rotate(-45deg) contrast(110%);
 }
 
-@media (width <= 1439px) {
-  .header {
-    min-width: 60dvw;
-  }
-
-  .post {
-    min-width: 60dvw;
-  }
-
-  .footer__button {
-    min-width: 30dvw;
-  }
-}
-
-@media (width <= 375px) and (orientation: portrait) {
+@media (width <= 500px) and (orientation: portrait) {
   /*Страница*/
   .page {
-    margin: 0;
     min-height: 100dvh;
     min-width: 100dvw;
   }
